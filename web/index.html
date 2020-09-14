@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+<meta charset="utf-8" name="viewport" content="width=divice-width,initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style type="text/css">
+  
+
+  * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .navbar {
+            font-size: 18px;
+            background-image: linear-gradient(260deg, #002871 0%, #00bd9a 120%);
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            padding-bottom: 10px;
+        }
+
+        .main-nav {
+            list-style-type: none;
+            display: none;
+        }
+
+        .nav-links,
+        .logo {
+            text-decoration: none;
+            color: white;
+        }
+
+        .main-nav li {
+            text-align: center;
+            margin: 15px auto;
+        }
+
+        .logo {
+            display: inline-block;
+            font-size: 22px;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        .navbar-toggle {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 24px;
+        }
+
+        .active {
+            display: block;
+        }
+
+        @media screen and (min-width: 768px) {
+          button:hover{
+    background-color:#0008ff96;
+    transition: 0.5s;
+    color: #ffffff00;
+  }
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 0;
+                height: 70px;
+                align-items: center;
+            }
+
+            .main-nav {
+                display: flex;
+                margin-right: 30px;
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+
+            .main-nav li {
+                margin: 0;
+            }
+
+            .nav-links {
+                margin-left: 40px;
+            }
+
+            .logo {
+                margin-top: 0;
+            }
+
+            .navbar-toggle {
+                display: none;
+            }
+
+            .logo:hover,
+            .nav-links:hover {
+                color: yellow;
+            }
+        }
+
+.msg{
+  font-size: 5vw;
+  
+  animation: nilesh 1s infinite;
+     position: absolute;
+    left: 4vw;
+    top: 40vh;
+}
+.img
+{
+  background-image: url("car.jpg");
+  background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+        height: 555px;
+        filter: brightness(0.6);
+}
+@keyframes nilesh
+{
+  0%{color: red}
+  25%{color: blue}
+  50%{color: green}
+  100%{color: yellow}
+
+}
+  
+  button
+  {
+    cursor: pointer;
+    background-color: #ffffff00;
+    border: 2px solid #00ff37;
+    font-size: 20px;
+    padding: 10px 30px;
+    border-radius: 200px;
+    font-weight: bold;
+    color: #00ffdc;
+  }
+  button:hover{
+    background-color:#0008ff96;
+    transition: 0.5s;
+    color: #ffffff00;
+  }
+.photo
+{
+  height: auto;
+    width: 50vw;
+    padding-right: 4px;
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+<div>
+<nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </span>
+        <a href="#" class="logo">Vehicle Sharing</a>
+        <ul class="main-nav" id="js-menu">
+            <li>
+                <a href="index.html" class="nav-links">Home</a>
+            </li>
+            <li>
+                <a href="signup.html" class="nav-links">Sign Up</a>
+            </li>
+            <li>
+                <a href="signin.jsp" class="nav-links">Sign In</a>
+            </li>
+            <li>
+                <a href="contact.html" class="nav-links">Contact Us</a>
+            </li>
+            <li>
+                <a href="about.html" class="nav-links">About Us</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div>
+<div class="img"></div>
+<p class="msg">
+  Welcome To Vehicle Sharing Portal.<br><br>
+  It's Cool To Car Pool.
+ <br>
+
+ <button onclick="location.href='offerride.jsp'">Offer Ride</button>
+ <button onclick="location.href='findride1.jsp'">Find Ride</button>
+
+</p>
+</div>
+<div style="background-color: #0000001a;">
+<br><br><br><br>
+<div style="float: left;">
+
+<img class="photo" src="carpool1.jpg" ></div>
+<div style="" >
+
+<p >
+  Smart :<br>
+With access to millions of journeys, you can quickly find people nearby travelling your way.
+<br><br>
+Simple :<br>
+Enter your exact address to find the perfect ride. Choose who you’d like to travel with. And book!
+<br><br>
+Seamless :<br>
+Get to your exact destination, without the hassle. No queues. No waiting around.
+</p>
+</div>
+
+<br><br>
+
+
+
+<div style="background-color:black; height: 8vh; margin-top: 30vw;">
+  <p ><center style="color: white; padding-top: 2vh;">Feel Free To Contact Us.</center></p>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+
+  let mainNav = document.getElementById('js-menu');
+let navBarToggle = document.getElementById('js-navbar-toggle');
+
+navBarToggle.addEventListener('click', function () {
+  mainNav.classList.toggle('active');
+});
+</script>
+</body>
+</html>

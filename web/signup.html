@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<link rel="stylesheet" type="text/css" href="nav.css">
+
+<meta charset="utf-8" name="viewport" content="width=divice-width,initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    
+</head>
+<body style="margin:0px; padding: 0 !important;">
+
+
+
+
+<nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </span>
+        <a href="#" class="logo">Vehicle Sharing</a>
+        <ul class="main-nav" id="js-menu">
+            <li>
+                <a href="index.html" class="nav-links">Home</a>
+            </li>
+            <li>
+                <a href="signup.html" class="nav-links">Sign Up</a>
+            </li>
+            <li>
+                <a href="signin.jsp" class="nav-links">Sign In</a>
+            </li>
+            <li>
+                <a href="contact.html" class="nav-links">Contact Us</a>
+            </li>
+            <li>
+                <a href="about.html" class="nav-links">About Us</a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+
+
+    <div class="main" style="padding: 25px 0px;">
+
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+            <div class="container">
+                <div class="signup-content">
+                    <form  id="signup-form" action="signup_serv" method="post" class="signup-form" onsubmit="return pass()" name="form">
+                        <h2 class="form-title">Create account</h2>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="name" id="name" placeholder="Your Name" required/>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" name="email" id="email" placeholder="Your Email" required/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="password" id="password" placeholder="Password" required/>
+                            
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-input" name="re_password" id="re_password" placeholder="Confirm password" required/>
+                        </div>
+
+                         <div class="form-group">
+                            <input type="text" class="form-input" name="adhar_no" id="adhar_no" placeholder="Your Adhar No." minlength="12" maxlength="12" required/>
+                        </div>
+
+                         <div class="form-group">
+                             <input type="text" class="form-input" name="phone" id="phone" placeholder="Your Phone No." required minlength="10" maxlength="12" />
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Sign up" style="cursor: pointer;"  required />
+                        </div>
+                    </form>
+                    <p class="loginhere" style="margin-top: 0px !important;">
+                        Have already an account ? <a href="signin.jsp" class="loginhere-link">Login here</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+<script type="text/javascript" src="nav.js"></script>
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+        
+function pass()
+{
+    var pass=document.forms["form"]["password"].value;
+        var confirm_pass=document.forms["form"]["re_password"].value;
+
+            if (pass!=confirm_pass) 
+            {
+                
+                alert("Password and confirm password does not match");
+                document.getElementById('re_password').style.borderColor='red';
+                return false;
+                
+                
+                
+        }
+        else
+        {
+            document.getElementById('re_password').style.borderColor='#ebebeb';
+        }
+
+}
+
+    </script>
+   
+</body>
+</html>
